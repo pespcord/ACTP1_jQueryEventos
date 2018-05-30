@@ -28,6 +28,12 @@
 	<meta charset="utf-8">
 	<title>Ejercicio 02</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<style>
+		.sizeH2{
+			font-size: 4rem;
+		}
+	</style>
 </head>
 <body>
 	<header class="header__main">
@@ -137,4 +143,16 @@
 		<p class="footer__legal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sint praesentium laboriosam atque placeat architecto, maxime temporibus sequi veniam quae culpa accusantium dignissimos natus perferendis mollitia quam optio incidunt. Esse!</p>
 	</footer>
 </body>
+<script>
+	// Muchos hijos - traversing
+	$('.article').eq(3).children('.article__body').children('.article__socialnetworks').children('li').eq(3).children('a').text('Pinterest').attr("href","http://pinterest.com");
+	// llamar por atributo
+	$('[href="#"]').on('click', function(e){
+		e.preventDefault();
+	});
+	// cambiar tamaños h2
+	$('.header__main').children('h2').addClass("sizeH2");
+	// $('.header__main > h2').addClass("sizeH2") es lo mismo que arriba
+
+</script>
 </html>

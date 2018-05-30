@@ -113,4 +113,20 @@
   </ul>
 
 </body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+  $('.social__like').on('click',function(event){
+    event.preventDefault();
+      $(this).toggleClass('social__like--clicked');
+  });
+  $('.social__link').on('click', function(event){
+    event.preventDefault();
+    event.stopPropagation();
+    var alerta = $(this).parent().parent().siblings('.meals__img').attr('alt');
+    alert(alerta);
+  });
+
+
+</script>
+
 </html>

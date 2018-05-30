@@ -62,4 +62,11 @@
 	</nav>
 
 </body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+	$('.navbar').children('ul').children('li').eq(3).append('<ul><li><a href="#">link 4.a</a></li></ul>'); //append - inserta dentro el codigo que queremos poner ANTES
+	$('.navbar').children('ul').children('li').eq(3).before('<li><a href="#">link 3.5</a></li>'); //before - la deja antes el elemento que seleccioné
+	$('.navbar').children('ul').children('li').eq(6).prepend('😎');//append - inserta dentro el codigo que queremos poner DESPUÉS
+	$('.navbar').children('ul').children('li').eq(6).after('🙂'); //after - la deja después el elemento que seleccioné
+</script>
 </html>
